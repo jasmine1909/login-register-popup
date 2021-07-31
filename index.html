@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-popup">
+      <div class="box">
+        <div class="form-box">
+          <div class="close">&times;</div>
+          <div class="button-box">
+            <div class="btn"></div>
+            <button class="toggle-btn" onclick="login()">Login</button>
+            <button class="toggle-btn" onclick="register()">Register</button>
+          </div>
+
+          <form id="login" action="" class="input-group">
+            <input type="text" class="form-control" placeholder="Your UserID" />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter Your password"
+            />
+            <input type="checkbox" class="check-box" /><span>
+              Remember Password</span
+            >
+            <button type="submit" class="submit-btn">Log in</button>
+          </form>
+          <form id="register" action="" class="input-group">
+            <input type="text" class="form-control" placeholder="Your UserID" />
+
+            <input type="text" class="form-control" placeholder="Your Email" />
+            <input
+              type="email"
+              class="form-control"
+              placeholder="Enter Your password"
+            />
+            <input type="checkbox" class="check-box" /><span>
+              I agree to the terms & conditions</span
+            >
+            <button type="submit" class="submit-btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.querySelector(".btn");
+      function register() {
+        x.style.left = "-480px";
+        y.style.left = "30px";
+        z.style.left = "100px";
+      }
+
+      function login() {
+        x.style.left = "30px";
+        y.style.left = "480px";
+        z.style.left = "0px";
+      }
+
+      //popup
+      const loginPopup = document.querySelector(".login-popup");
+      const close = document.querySelector(".close");
+
+      window.addEventListener("load", function () {
+        showPopup();
+      });
+
+      function showPopup() {
+        const timeLimit = 5;
+        let i = 0;
+        const timer = setInterval(function () {
+          i++;
+          if (i == timeLimit) {
+            clearInterval(timer);
+            loginPopup.classList.add("show");
+          }
+        }, 1000);
+      }
+
+      close.addEventListener("click", () => {
+        loginPopup.classList.remove("show");
+      });
+    </script>
+  </body>
+</html>

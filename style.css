@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.login-popup {
+  visibility: hidden;
+  opacity: 0;
+}
+.login-popup.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.form-box {
+  overflow: hidden;
+
+  width: 380px;
+  height: 480px;
+  position: relative;
+  margin: 6% auto;
+  padding: 2rem;
+  background-color: lightblue;
+}
+.button-box {
+  width: 200px;
+  margin: 35px auto;
+  position: relative;
+  box-shadow: 0 0 20px 9px #ff61241f;
+  border-radius: 30px;
+}
+.toggle-btn {
+  padding: 10px 25px;
+  cursor: pointer;
+  border: 0;
+  position: relative;
+  outline: none;
+  background-color: transparent;
+}
+.btn {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+.input-group {
+  top: 180px;
+  position: absolute;
+  width: 300px;
+  transition: all 0.5s ease;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.6rem;
+  margin: 0.6rem;
+  border: none;
+  border-bottom: 1px solid #999;
+  outline: none;
+  background-color: transparent;
+}
+.submit-btn {
+  width: 85%;
+  padding: 0.6rem;
+  margin: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border-radius: 30px;
+  outline: 0;
+  border: none;
+}
+.check-box {
+  margin: 0.8rem;
+}
+#login {
+  left: 50px;
+}
+#register {
+  left: 100%;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 2rem;
+  font-weight: 800;
+}
